@@ -10,7 +10,7 @@ IPL_LOAD_ADDR := 0x40008000
 
 ################################################################################
 
-TARGET := aio_rcm
+TARGET := ams_rcm
 BUILDDIR := build
 OUTPUTDIR := output
 SOURCEDIR = bootloader

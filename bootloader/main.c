@@ -444,14 +444,13 @@ void ipl_main()
 	WPRINTF("Running aio-switch-updater rcm payload...\n");
 
 	if (sd_mount()) {
-		easy_rename("atmosphere/fusee-secondary.bin.aio", "atmosphere/fusee-secondary.bin");
-		easy_rename("sept/payload.bin.aio", "sept/payload.bin");
-		easy_rename("atmosphere/stratosphere.romfs.aio", "atmosphere/stratosphere.romfs");
-		easy_rename("atmosphere/package3.aio", "atmosphere/package3");
+		easy_rename("atmosphere/stratosphere.romfs.temp", "atmosphere/stratosphere.romfs");
+		easy_rename("atmosphere/package3.temp", "atmosphere/package3");
+		easy_rename("switch/AtmoPackUpdater.nro.temp", "switch/AtmoPackUpdater.nro");
+		easy_rename("switch/AtmoPackUpdater/AtmoPackUpdater.nro.temp", "switch/AtmoPackUpdater/AtmoPackUpdater.nro");
 
 		// If the console is a patched or Mariko unit
 		if (h_cfg.t210b01 || h_cfg.rcm_patched) {
-			easy_rename("payload.bin.aio", "payload.bin");
 			power_set_state(POWER_OFF_REBOOT);
 		}
 
