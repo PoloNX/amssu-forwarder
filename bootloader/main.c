@@ -448,6 +448,7 @@ void ipl_main()
 		easy_rename("atmosphere/package3.temp", "atmosphere/package3");
 		easy_rename("switch/AtmoPackUpdater.nro.temp", "switch/AtmoPackUpdater.nro");
 		easy_rename("switch/AtmoPackUpdater/AtmoPackUpdater.nro.temp", "switch/AtmoPackUpdater/AtmoPackUpdater.nro");
+		easy_rename("version.txt.temp", "version.txt");
 
 		// If the console is a patched or Mariko unit
 		if (h_cfg.t210b01 || h_cfg.rcm_patched) {
