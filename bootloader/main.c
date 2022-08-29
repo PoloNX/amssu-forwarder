@@ -446,8 +446,7 @@ void ipl_main()
 	if (sd_mount()) {
 		easy_rename("atmosphere/stratosphere.romfs.temp", "atmosphere/stratosphere.romfs");
 		easy_rename("atmosphere/package3.temp", "atmosphere/package3");
-		easy_rename("switch/AtmoPackUpdater.nro.temp", "switch/AtmoPackUpdater.nro");
-		easy_rename("switch/AtmoPackUpdater/AtmoPackUpdater.nro.temp", "switch/AtmoPackUpdater/AtmoPackUpdater.nro");
+		easy_rename("switch/AtmoPackUpdater.nro", "switch/AtmoPackUpdater/AtmoPackUpdater.nro");
 		easy_rename("version.txt.temp", "version.txt");
 
 		// If the console is a patched or Mariko unit
