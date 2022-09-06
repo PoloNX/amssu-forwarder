@@ -446,11 +446,15 @@ void ipl_main()
 	if (sd_mount()) {
 		easy_rename("atmosphere/stratosphere.romfs.temp", "atmosphere/stratosphere.romfs");
 		easy_rename("atmosphere/package3.temp", "atmosphere/package3");
+
 		easy_rename("switch/AtmoPackUpdater.nro", "switch/AtmoPackUpdater/AtmoPackUpdater.nro");
+		
 		easy_rename("version.txt.temp", "version.txt");
+		easy_rename("payload.bin.temp", "payload.bin");
 
 		// If the console is a patched or Mariko unit
 		if (h_cfg.t210b01 || h_cfg.rcm_patched) {
+			WPRINTF("You're on a patched switch, just restart your switch... \n");
 			power_set_state(POWER_OFF_REBOOT);
 		}
 
